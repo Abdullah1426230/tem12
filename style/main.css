@@ -1,0 +1,477 @@
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  list-style: none;
+  font-family: 'Public Sans', sans-serif;
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+#open,
+#close,
+#top {
+  cursor: pointer;
+}
+
+button {
+  display: block;
+  border: none;
+  padding: 15px 25px;
+  border-radius: 20px;
+  margin: auto;
+  font-weight: bold;
+  letter-spacing: 1px;
+  cursor: pointer;
+  -webkit-transition: .4s;
+  transition: .4s;
+  color: white;
+  background-image: -webkit-gradient(linear, left top, right top, from(#31d35c), to(#2bb7da));
+  background-image: linear-gradient(to right, #31d35c, #2bb7da);
+}
+
+button:hover {
+  opacity: .7;
+}
+
+/*=============================================
+=            Header            =
+=============================================*/
+header {
+  z-index: 5555555555555555;
+}
+
+header .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px 10px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+header .container a {
+  color: #9698a6;
+}
+
+header .container a li {
+  display: inline-block;
+  position: relative;
+  margin: 0 10px;
+}
+
+header .container a li::before {
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  left: 0;
+  bottom: -30px;
+  background-color: #31d35c;
+  display: none;
+}
+
+header .container a li:hover {
+  color: #2d314d;
+  font-weight: bold;
+}
+
+header .container a li:hover::before {
+  display: block;
+}
+
+header .container .icon-menu {
+  display: none;
+}
+
+header .container .logo img {
+  margin-top: 3px;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  header button,
+  header .links {
+    display: none;
+  }
+  header .icon-menu {
+    display: block !important;
+  }
+}
+
+/**
+ *
+ * Side
+ *
+ */
+aside {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  -webkit-transition: .4s;
+  transition: .4s;
+  height: 100vh;
+  overflow-y: auto;
+  z-index: 555555555555555555555555555;
+  background-color: #9698a6;
+}
+
+aside .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 60px;
+  line-height: 60px;
+  padding: 0 10px;
+  background-color: #f3f4f6;
+}
+
+aside .title span {
+  display: block;
+  margin-top: 5px;
+}
+
+aside ul {
+  margin-top: 40px;
+}
+
+aside ul a {
+  color: white;
+}
+
+aside ul a li {
+  background-color: #2d314d;
+  padding: 15px;
+  font-size: 20px;
+  -webkit-transition: .4s;
+  transition: .4s;
+  margin: 12px 0;
+}
+
+aside ul a li:hover {
+  background-color: #fafafa;
+  color: #2d314d;
+}
+
+.sideOverlay {
+  position: fixed;
+  z-index: 55555555555555555555555555;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.56);
+}
+
+/*=====  End of Header  ======*/
+/*=============================================
+=            Section One            =
+=============================================*/
+section.one {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#f3f4f6), to(white));
+  background-image: linear-gradient(to bottom, #f3f4f6, white);
+  position: relative;
+}
+
+section.one .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 10px;
+}
+
+section.one .text {
+  max-width: calc(1200px - 550px);
+  min-width: 300px;
+  margin: 80px auto;
+}
+
+section.one .text h1 {
+  font-size: 60px;
+  line-height: 1.25;
+  font-weight: normal;
+  color: #2d314d;
+}
+
+section.one .text p {
+  margin: 24px 0;
+  font-size: 22px;
+  color: #9698a6;
+}
+
+/*=====  End of Section One  ======*/
+/*=============================================
+=            Section Two            =
+=============================================*/
+section.two {
+  background-color: #fafafa;
+  padding: 80px 12px;
+}
+
+section.two .container > h1 {
+  font-size: 40px;
+  font-weight: normal;
+  color: #2d314d;
+}
+
+section.two .container > p {
+  margin: 20px 0 30px;
+  font-size: 18px;
+  max-width: 600px;
+  line-height: 1.4;
+  color: #9698a6;
+}
+
+section.two .container .articles {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 10px;
+}
+
+section.two .container .articles article {
+  width: 280px;
+  margin: 10px auto;
+}
+
+section.two .container .articles article h3 {
+  font-weight: normal;
+  font-size: 25px;
+  margin: 20px 0;
+}
+
+section.two .container .articles article p {
+  font-size: 17px;
+  line-height: 1.3;
+  color: #9698a6;
+}
+
+section.two .container .articles article img {
+  margin: 20px 0;
+}
+
+@media (max-width: 768px) {
+  h1,
+  article {
+    text-align: center;
+  }
+  article {
+    width: 95% !important;
+  }
+  article img {
+    margin: auto;
+    height: auto !important;
+    text-align: center;
+  }
+  p {
+    text-align: center;
+  }
+}
+
+/*=====  End of Section Two  ======*/
+/*=============================================
+=            Section Three            =
+=============================================*/
+section.three {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#f3f4f6), to(white));
+  background-image: linear-gradient(to top, #f3f4f6, white);
+  padding: 50px 10px;
+}
+
+section.three .container h1 {
+  margin-bottom: 50px;
+  font-size: 40px;
+  font-weight: normal;
+  color: #2d314d;
+}
+
+section.three .container .articles {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+section.three .container .articles article {
+  width: 280px;
+  border-radius: 6px;
+  overflow: hidden;
+  margin: 10px auto;
+  background-color: white;
+}
+
+section.three .container .articles article img {
+  width: 100%;
+  height: 180px;
+}
+
+section.three .container .articles article .text {
+  padding: 15px;
+}
+
+section.three .container .articles article h3 {
+  margin: 15px 0;
+  font-size: 22px;
+  color: #2d314d;
+  font-weight: normal;
+  line-height: 1.15;
+  letter-spacing: -1px;
+  cursor: pointer;
+}
+
+section.three .container .articles article h3:hover {
+  color: #2bb7da;
+}
+
+section.three .container .articles article small {
+  color: #9698a6;
+}
+
+section.three .container .articles article p {
+  line-height: 1.2;
+  font-size: 17px;
+  color: #9698a6;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    text-align: center;
+  }
+}
+
+/*=====  End of Section Three  ======*/
+/*=============================================
+=            Footer            =
+=============================================*/
+footer {
+  background-color: #2d314d;
+  padding: 30px 12px;
+}
+
+footer .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .container > div {
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 300px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  color: #f3f4f6;
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
+}
+
+footer .container > div:last-of-type {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+footer .container > div:last-of-type p {
+  color: #9698a6;
+}
+
+footer .container > div .icons img {
+  cursor: pointer;
+}
+
+footer .container > div li {
+  padding: 6px 0;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+footer .container > div li:hover {
+  color: #31d35c;
+}
+
+footer .container button {
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  footer .container > div {
+    -webkit-box-align: center !important;
+        -ms-flex-align: center !important;
+            align-items: center !important;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    height: auto;
+    width: 100% !important;
+    margin: 0px auto;
+    text-align: center;
+  }
+  footer .container > div .icons,
+  footer .container > div button {
+    margin-top: 10px;
+  }
+  footer .container > div button {
+    margin-bottom: 10px;
+  }
+}
+
+/*=====  End of Footer  ======*/
+/*# sourceMappingURL=main.css.map */
